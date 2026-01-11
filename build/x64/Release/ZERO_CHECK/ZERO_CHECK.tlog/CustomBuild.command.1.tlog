@@ -1,0 +1,10 @@
+^D:\YM-CODE\GM-NTG-GUI\BUILD\CMAKEFILES\DFF8BD61C4EF16E7CF057CA94AF6A3A8\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/YM-Code/GM-NTG-GUI -BD:/YM-Code/GM-NTG-GUI/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/YM-Code/GM-NTG-GUI/build/GM-NTG-GUI.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
