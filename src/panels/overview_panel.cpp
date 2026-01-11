@@ -189,7 +189,7 @@ void OverviewPanel::LoadData(const QJsonObject& result) {
 
     // 问题信息
     QJsonObject problem_size = result["problem_size"].toObject();
-    problem_info_->setText(QString("问题规模: P=%1 工厂, N=%2 产品, G=%3 家族, T=%4 周期")
+    problem_info_->setText(QString("问题规模: P=%1 工厂, N=%2 产品, G=%3 产品大类, T=%4 周期")
         .arg(problem_size["num_plants"].toInt())
         .arg(problem_size["num_items"].toInt())
         .arg(problem_size["num_families"].toInt())
