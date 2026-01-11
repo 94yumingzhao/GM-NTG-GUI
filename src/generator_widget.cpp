@@ -186,7 +186,7 @@ void GeneratorWidget::SetupUI() {
         msg.setWindowTitle("换型成本");
         msg.setTextFormat(Qt::RichText);
         msg.setText(
-            "c<sup>Y</sup><sub>g</sub>：切换生产不同产品组别 g 时的固定成本。<br><br>"
+            "c<sup>Y</sup><sub>g</sub>：切换生产不同产品大类 g 时的固定成本。<br><br>"
             "包括设备调整、清洗、校准等。<br>"
             "c<sup>Y</sup><sub>g</sub> 较大 → 鼓励批量生产，减少换型次数");
         msg.exec();
@@ -573,7 +573,7 @@ QString GeneratorWidget::GenerateInstanceCSV() {
     }
     out << "\n";
 
-    // Section 5: 产品-家族映射 h[i][g]
+    // Section 5: 产品-产品大类映射 h[i][g]
     out << "[ITEM_FAMILY]\n";
     out << "# i,g\n";
     for (int i = 0; i < N; ++i) {
