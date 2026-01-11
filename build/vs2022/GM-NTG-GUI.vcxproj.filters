@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\build\vs2022\GM-NTG-GUI_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\main_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\parameter_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\log_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\results_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\solver_worker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\analysis_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\generator_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\panels\overview_panel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\panels\plant_panel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\panels\coalition_panel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\src\panels\iteration_panel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\build\vs2022\GM-NTG-GUI_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\build\vs2022\GM-NTG-GUI_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\YM-Code\GM-NTG-GUI\build\vs2022\GM-NTG-GUI_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\main_window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\parameter_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\log_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\results_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\solver_worker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\analysis_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\generator_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\panels\overview_panel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\panels\plant_panel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\panels\coalition_panel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\YM-Code\GM-NTG-GUI\src\panels\iteration_panel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\YM-Code\GM-NTG-GUI\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E1545D39-5350-30BD-8158-B776D9D73DD5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BFF5E007-9EC8-36A1-9F26-D6DF5C589392}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

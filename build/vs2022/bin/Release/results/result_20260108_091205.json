@@ -1,0 +1,33 @@
+{
+  "status": "Optimal",
+  "converged": true,
+  "problem_size": {
+    "num_plants": 3,
+    "num_items": 4,
+    "num_families": 2,
+    "num_periods": 6
+  },
+  "grand_coalition_cost": 21488.5000,
+  "least_core_slack": 0.000000,
+  "allocation": {
+    "plant_0": 6915.5000,
+    "plant_1": 8457.0000,
+    "plant_2": 6116.0000
+  },
+  "allocation_array": [6915.5000, 8457.0000, 6116.0000],
+  "iterations": 1,
+  "runtime_seconds": 1.33,
+  "cuts_added": [
+    {
+      "coalition": [2],
+      "cost": 6116.0000,
+      "violation": 0.000000,
+      "runtime": 0.600
+    }
+  ],
+  "interpretation": {
+    "core_status": "non-empty",
+    "stability": "stable",
+    "description": "The allocation is in the core. No coalition has incentive to deviate."
+  }
+}
