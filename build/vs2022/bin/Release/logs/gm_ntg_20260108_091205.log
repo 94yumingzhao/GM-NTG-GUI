@@ -1,0 +1,768 @@
+[2026-01-08 09:12:05] ============================================
+[2026-01-08 09:12:05] GM-NTG-Core: 多工厂NTG博弈求解器
+[2026-01-08 09:12:05] 版本: 1.0
+[2026-01-08 09:12:05] ============================================
+[2026-01-08 09:12:05] 输入文件: D:/YM-Code/GM-NTG-Core/data/test_3plant.csv
+[2026-01-08 09:12:05] 日志目录: logs
+[2026-01-08 09:12:05] 结果目录: results
+[2026-01-08 09:12:05] 日志文件: logs/gm_ntg_20260108_091205.log
+[2026-01-08 09:12:05] [Input] 加载数据: D:/YM-Code/GM-NTG-Core/data/test_3plant.csv
+[2026-01-08 09:12:05] [Input] 解析数据段: DIMENSIONS
+[2026-01-08 09:12:05] [Input] 解析数据段: CAPACITY
+[2026-01-08 09:12:05] [Input] 解析数据段: DEMAND
+[2026-01-08 09:12:05] [Input] 解析数据段: INIT_INVENTORY
+[2026-01-08 09:12:05] [Input] 解析数据段: ITEM_FAMILY
+[2026-01-08 09:12:05] [Input] 解析数据段: PRODUCTION
+[2026-01-08 09:12:05] [Input] 解析数据段: SETUP
+[2026-01-08 09:12:05] [Input] 解析数据段: HOLDING
+[2026-01-08 09:12:05] [Input] 解析数据段: TRANSFER
+[2026-01-08 09:12:05] [LOAD:OK:3:4:2:6]
+[2026-01-08 09:12:05] [Input] 数据加载完成: P=3 工厂, N=4 产品, G=2 家族, T=6 周期
+[2026-01-08 09:12:05] [Algorithm] 步骤1: 计算大联盟成本 c(P)...
+[2026-01-08 09:12:05] [Planning] 计算大联盟成本 c(P)...
+[2026-01-08 09:12:05] [Planning] 求解联盟成本 S={0,1,2}
+[2026-01-08 09:12:05] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:05] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:05] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:05] CPXPARAM_TimeLimit                               300
+[2026-01-08 09:12:05] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:05] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:05] Found incumbent of value 24428.500000 after 0.00 sec. (0.03 ticks)
+[2026-01-08 09:12:05] Tried aggregator 1 time.
+[2026-01-08 09:12:05] MIP Presolve eliminated 144 rows and 0 columns.
+[2026-01-08 09:12:05] MIP Presolve modified 72 coefficients.
+[2026-01-08 09:12:05] Reduced MIP has 162 rows, 324 columns, and 744 nonzeros.
+[2026-01-08 09:12:05] Reduced MIP has 36 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:05] Presolve time = 0.00 sec. (0.54 ticks)
+[2026-01-08 09:12:05] Probing time = 0.00 sec. (0.06 ticks)
+[2026-01-08 09:12:05] Tried aggregator 1 time.
+[2026-01-08 09:12:05] Detecting symmetries...
+[2026-01-08 09:12:05] Reduced MIP has 162 rows, 324 columns, and 744 nonzeros.
+[2026-01-08 09:12:05] Reduced MIP has 36 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:05] Presolve time = 0.00 sec. (0.40 ticks)
+[2026-01-08 09:12:05] Probing time = 0.00 sec. (0.06 ticks)
+[2026-01-08 09:12:05] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:05] MIP search method: dynamic search.
+[2026-01-08 09:12:05] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:05] Root relaxation solution time = 0.00 sec. (0.46 ticks)
+
+[2026-01-08 09:12:05]         Nodes                                         Cuts/
+[2026-01-08 09:12:05]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:05] *     0+    0                        24428.5000        0.0000           100.00%
+[2026-01-08 09:12:05]       0     0    19531.8501    24    24428.5000    19531.8501      120   20.04%
+[2026-01-08 09:12:05] *     0+    0                        23995.0000    19531.8501            18.60%
+[2026-01-08 09:12:05]       0     0    20802.8673    15    23995.0000      Cuts: 98      173   13.30%
+[2026-01-08 09:12:05] *     0+    0                        22819.0000    20802.8673             8.84%
+[2026-01-08 09:12:05]       0     0    21348.7046     7    22819.0000      Cuts: 95      212    6.44%
+[2026-01-08 09:12:05] *     0+    0                        22305.0577    21348.7046             4.29%
+[2026-01-08 09:12:05]       0     0    21373.8935     5    22305.0577      Cuts: 21      220    4.17%
+[2026-01-08 09:12:05] *     0+    0                        21896.5000    21373.8935             2.39%
+[2026-01-08 09:12:05]       0     0    21375.5072     5    21896.5000  Flowpaths: 2      223    2.38%
+[2026-01-08 09:12:05]       0     0    21378.1352     4    21896.5000       Cuts: 3      225    2.37%
+[2026-01-08 09:12:05] Detecting symmetries...
+[2026-01-08 09:12:05]       0     0    21378.2375     5    21896.5000       Cuts: 3      226    2.37%
+[2026-01-08 09:12:05] *     0+    0                        21732.8333    21378.2375             1.63%
+[2026-01-08 09:12:06] *     0+    0                        21566.8077    21378.2375             0.87%
+[2026-01-08 09:12:06] *     0+    0                        21527.2692    21378.5712             0.69%
+[2026-01-08 09:12:06] *     0+    0                        21488.5000    21378.5712             0.51%
+[2026-01-08 09:12:06]       0     0  -1.00000e+75     0    21488.5000    21378.5712      226    0.51%
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06]       0     2    21378.2375     5    21488.5000    21378.5712      226    0.51%
+[2026-01-08 09:12:06] Elapsed time = 0.30 sec. (24.90 ticks, tree = 0.02 MB, solutions = 9)
+
+[2026-01-08 09:12:06] Flow cuts applied:  18
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  65
+[2026-01-08 09:12:06] Flow path cuts applied:  12
+[2026-01-08 09:12:06] Lift and project cuts applied:  5
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  17
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.28 sec. (24.75 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.16 sec. (3.77 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.14 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.44 sec. (28.52 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=21488.50, 间隙=0.0000, 用时=0.47s
+[2026-01-08 09:12:06] [GRAND:21488.50:0.47]
+[2026-01-08 09:12:06] [Algorithm] 大联盟成本 c(P) = 21488.50
+[2026-01-08 09:12:06] [Algorithm] 步骤2: 初始化MP，添加单体联盟约束...
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={0}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               300
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 6937.500000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:06] Tried aggregator 2 times.
+[2026-01-08 09:12:06] MIP Presolve eliminated 300 rows and 295 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 17 coefficients.
+[2026-01-08 09:12:06] Aggregator did 2 substitutions.
+[2026-01-08 09:12:06] Reduced MIP has 16 rows, 27 columns, and 47 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 5 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.28 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] Reduced MIP has 16 rows, 27 columns, and 47 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 5 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.03 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.03 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                         6937.5000      800.0000            88.47%
+[2026-01-08 09:12:06]       0     0     6617.4468     5     6937.5000     6617.4468       18    4.61%
+[2026-01-08 09:12:06]       0     0     6802.3792     4     6937.5000      Cuts: 30       28    1.95%
+[2026-01-08 09:12:06]       0     0     6876.6639     4     6937.5000      Cuts: 15       40    0.88%
+[2026-01-08 09:12:06]       0     0     6893.4162     4     6937.5000      Cuts: 15       45    0.64%
+[2026-01-08 09:12:06]       0     0     6913.6621     4     6937.5000      Cuts: 14       55    0.34%
+[2026-01-08 09:12:06] *     0+    0                         6915.5000     6913.6621             0.03%
+[2026-01-08 09:12:06]       0     0        cutoff           6915.5000                     55    0.00%
+[2026-01-08 09:12:06] Elapsed time = 0.09 sec. (1.22 ticks, tree = 0.01 MB, solutions = 2)
+
+[2026-01-08 09:12:06] Implied bound cuts applied:  3
+[2026-01-08 09:12:06] Flow cuts applied:  3
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  12
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  1
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.09 sec. (1.23 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.00 sec. (0.00 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.09 sec. (1.23 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=6915.50, 间隙=0.0000, 用时=0.13s
+[2026-01-08 09:12:06] [Init] c({0}) = 6915.50
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={1}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               300
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 8705.000000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:06] Tried aggregator 2 times.
+[2026-01-08 09:12:06] MIP Presolve eliminated 292 rows and 290 columns.
+[2026-01-08 09:12:06] MIP Presolve added 4 rows and 0 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 14 coefficients.
+[2026-01-08 09:12:06] Aggregator did 2 substitutions.
+[2026-01-08 09:12:06] Reduced MIP has 28 rows, 32 columns, and 76 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.32 ticks)
+[2026-01-08 09:12:06] Probing fixed 0 vars, tightened 8 bounds.
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] Tried aggregator 2 times.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] MIP Presolve eliminated 1 rows and 0 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 6 coefficients.
+[2026-01-08 09:12:06] Aggregator did 2 substitutions.
+[2026-01-08 09:12:06] Reduced MIP has 25 rows, 30 columns, and 68 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.06 ticks)
+[2026-01-08 09:12:06] Probing fixed 0 vars, tightened 1 bounds.
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.05 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                         8705.0000     1175.0000            86.50%
+[2026-01-08 09:12:06]       0     0     8071.7782     6     8705.0000     8071.7782       14    7.27%
+[2026-01-08 09:12:06] *     0+    0                         8487.0000     8071.7782             4.89%
+[2026-01-08 09:12:06]       0     0     8255.4457     5     8487.0000      Cuts: 20       21    2.73%
+[2026-01-08 09:12:06]       0     0     8436.9245     4     8487.0000      Cuts: 22       28    0.59%
+[2026-01-08 09:12:06] *     0+    0                         8459.5000     8436.9245             0.27%
+[2026-01-08 09:12:06]       0     0     8442.8333     3     8459.5000      Cuts: 10       33    0.20%
+[2026-01-08 09:12:06]       0     0     8442.8333     3     8459.5000    MIRcuts: 3       34    0.20%
+[2026-01-08 09:12:06] *     0+    0                         8457.0000     8442.8333             0.17%
+[2026-01-08 09:12:06]       0     0        cutoff           8457.0000     8457.0000       34    0.00%
+[2026-01-08 09:12:06] Elapsed time = 0.06 sec. (1.83 ticks, tree = 0.01 MB, solutions = 4)
+
+[2026-01-08 09:12:06] Implied bound cuts applied:  1
+[2026-01-08 09:12:06] Flow cuts applied:  6
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  8
+[2026-01-08 09:12:06] Flow path cuts applied:  3
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  6
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.08 sec. (1.85 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.00 sec. (0.00 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.08 sec. (1.85 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=8457.00, 间隙=0.0000, 用时=0.10s
+[2026-01-08 09:12:06] [Init] c({1}) = 8457.00
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={2}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               300
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 6116.000000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:06] Tried aggregator 2 times.
+[2026-01-08 09:12:06] MIP Presolve eliminated 300 rows and 295 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 17 coefficients.
+[2026-01-08 09:12:06] Aggregator did 2 substitutions.
+[2026-01-08 09:12:06] Reduced MIP has 16 rows, 27 columns, and 47 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 5 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.28 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] Reduced MIP has 16 rows, 27 columns, and 47 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 5 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.03 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.03 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                         6116.0000      750.0000            87.74%
+[2026-01-08 09:12:06]       0     0     5917.7410     4     6116.0000     5917.7410       20    3.24%
+[2026-01-08 09:12:06]       0     0     6041.8872     2     6116.0000      Cuts: 23       30    1.21%
+[2026-01-08 09:12:06]       0     0     6097.7082     2     6116.0000      Cuts: 16       37    0.30%
+[2026-01-08 09:12:06]       0     0     6097.8571     2     6116.0000       Cuts: 3       38    0.30%
+[2026-01-08 09:12:06]       0     0        cutoff           6116.0000     6116.0000       38    0.00%
+[2026-01-08 09:12:06] Elapsed time = 0.02 sec. (1.31 ticks, tree = 0.01 MB, solutions = 1)
+
+[2026-01-08 09:12:06] Implied bound cuts applied:  3
+[2026-01-08 09:12:06] Flow cuts applied:  1
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  8
+[2026-01-08 09:12:06] Flow path cuts applied:  3
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  4
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.02 sec. (1.32 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.00 sec. (0.00 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.02 sec. (1.32 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=6116.00, 间隙=0.0000, 用时=0.04s
+[2026-01-08 09:12:06] [Init] c({2}) = 6116.00
+[2026-01-08 09:12:06] [Algorithm] 初始化完成，添加了 3 个单体约束
+[2026-01-08 09:12:06] [Algorithm] 步骤3: 开始MP-SP迭代...
+[2026-01-08 09:12:06] [ITER:1:START]
+[2026-01-08 09:12:06] [Algorithm] 第 1 次迭代 (已用时: 0.7s)
+[2026-01-08 09:12:06] [MP] 求解主问题，已有 3 个联盟约束
+[2026-01-08 09:12:06] [MP:6915.50:8457.00:6116.00:0.0000]
+
+[2026-01-08 09:12:06] [MP] 求解完成: v=0.0000, 用时=0.001s
+[2026-01-08 09:12:06] [Algorithm] MP求解完成: v=0.0000
+[2026-01-08 09:12:06] [SP] 求解分离子问题，v_hat=0.0000
+[2026-01-08 09:12:06] [SP-Heur] 生成了 8 个联盟候选
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={0}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               75
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 6937.500000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:06] Tried aggregator 2 times.
+[2026-01-08 09:12:06] MIP Presolve eliminated 300 rows and 295 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 17 coefficients.
+[2026-01-08 09:12:06] Aggregator did 2 substitutions.
+[2026-01-08 09:12:06] Reduced MIP has 16 rows, 27 columns, and 47 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 5 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.28 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] Reduced MIP has 16 rows, 27 columns, and 47 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 5 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.03 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.03 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                         6937.5000      800.0000            88.47%
+[2026-01-08 09:12:06]       0     0     6617.4468     5     6937.5000     6617.4468       18    4.61%
+[2026-01-08 09:12:06]       0     0     6802.3792     4     6937.5000      Cuts: 30       28    1.95%
+[2026-01-08 09:12:06]       0     0     6876.6639     4     6937.5000      Cuts: 15       40    0.88%
+[2026-01-08 09:12:06]       0     0     6893.4162     4     6937.5000      Cuts: 15       45    0.64%
+[2026-01-08 09:12:06]       0     0     6913.6621     4     6937.5000      Cuts: 14       55    0.34%
+[2026-01-08 09:12:06] *     0+    0                         6915.5000     6913.6621             0.03%
+[2026-01-08 09:12:06]       0     0        cutoff           6915.5000                     55    0.00%
+[2026-01-08 09:12:06] Elapsed time = 0.05 sec. (1.22 ticks, tree = 0.01 MB, solutions = 2)
+
+[2026-01-08 09:12:06] Implied bound cuts applied:  3
+[2026-01-08 09:12:06] Flow cuts applied:  3
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  12
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  1
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.05 sec. (1.23 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.00 sec. (0.00 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.05 sec. (1.23 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=6915.50, 间隙=0.0000, 用时=0.06s
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={0,1}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               75
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 16762.500000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] MIP Presolve eliminated 204 rows and 156 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 48 coefficients.
+[2026-01-08 09:12:06] Reduced MIP has 108 rows, 168 columns, and 400 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.39 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.04 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] Reduced MIP has 108 rows, 168 columns, and 400 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.23 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.04 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.27 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                        16762.5000        0.0000           100.00%
+[2026-01-08 09:12:06]       0     0    13960.6001    18    16762.5000    13960.6001       77   16.72%
+[2026-01-08 09:12:06]       0     0    14904.1418    12    16762.5000      Cuts: 71      106   11.09%
+[2026-01-08 09:12:06]       0     0    15343.1248     4    16762.5000      Cuts: 76      131    8.47%
+[2026-01-08 09:12:06] *     0+    0                        15669.5000    15343.1248             2.08%
+[2026-01-08 09:12:06] *     0+    0                        15580.0000    15343.1248             1.52%
+[2026-01-08 09:12:06]       0     0    15358.3333     1    15580.0000      Cuts: 12      133    1.42%
+[2026-01-08 09:12:06] *     0+    0                        15372.5000    15358.3333             0.09%
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06]       0     2    15358.3333     1    15372.5000    15358.3333      133    0.09%
+[2026-01-08 09:12:06] Elapsed time = 0.05 sec. (7.80 ticks, tree = 0.02 MB, solutions = 4)
+
+[2026-01-08 09:12:06] Implied bound cuts applied:  4
+[2026-01-08 09:12:06] Flow cuts applied:  15
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  47
+[2026-01-08 09:12:06] Flow path cuts applied:  7
+[2026-01-08 09:12:06] Lift and project cuts applied:  4
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  13
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.03 sec. (7.72 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.03 sec. (1.30 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.03 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.06 sec. (9.02 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=15372.50, 间隙=0.0001, 用时=0.08s
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={0,2}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               75
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 13053.500000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] MIP Presolve eliminated 204 rows and 156 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 48 coefficients.
+[2026-01-08 09:12:06] Reduced MIP has 108 rows, 168 columns, and 400 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.39 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.04 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] Reduced MIP has 108 rows, 168 columns, and 400 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.23 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.04 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.19 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                        13053.5000        0.0000           100.00%
+[2026-01-08 09:12:06]       0     0    11891.6755    12    13053.5000    11891.6755       53    8.90%
+[2026-01-08 09:12:06]       0     0    12632.9498     7    13053.5000      Cuts: 67       80    3.22%
+[2026-01-08 09:12:06]       0     0    12915.7770     3    13053.5000      Cuts: 61      101    1.06%
+[2026-01-08 09:12:06]       0     0    12919.0612     3    13053.5000      Cuts: 12      104    1.03%
+[2026-01-08 09:12:06]       0     0    12948.8242     3    13053.5000       Cuts: 9      113    0.80%
+[2026-01-08 09:12:06]       0     0    12955.7493     2    13053.5000      Cuts: 10      116    0.75%
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06]       0     0    12955.8371     2    13053.5000       Cuts: 3      117    0.75%
+[2026-01-08 09:12:06] *     0+    0                        13031.5000    12955.8371             0.58%
+[2026-01-08 09:12:06]       0     0        cutoff          13031.5000    13031.5000      117    0.00%
+[2026-01-08 09:12:06] Elapsed time = 0.03 sec. (7.75 ticks, tree = 0.01 MB, solutions = 2)
+
+[2026-01-08 09:12:06] Implied bound cuts applied:  4
+[2026-01-08 09:12:06] Flow cuts applied:  12
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  36
+[2026-01-08 09:12:06] Flow path cuts applied:  10
+[2026-01-08 09:12:06] Lift and project cuts applied:  2
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  9
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.03 sec. (7.77 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.00 sec. (0.00 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.03 sec. (7.77 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=13031.50, 间隙=0.0000, 用时=0.05s
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={1}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               75
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 8705.000000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:06] Tried aggregator 2 times.
+[2026-01-08 09:12:06] MIP Presolve eliminated 292 rows and 290 columns.
+[2026-01-08 09:12:06] MIP Presolve added 4 rows and 0 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 14 coefficients.
+[2026-01-08 09:12:06] Aggregator did 2 substitutions.
+[2026-01-08 09:12:06] Reduced MIP has 28 rows, 32 columns, and 76 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.32 ticks)
+[2026-01-08 09:12:06] Probing fixed 0 vars, tightened 8 bounds.
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] Tried aggregator 2 times.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] MIP Presolve eliminated 1 rows and 0 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 6 coefficients.
+[2026-01-08 09:12:06] Aggregator did 2 substitutions.
+[2026-01-08 09:12:06] Reduced MIP has 25 rows, 30 columns, and 68 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 10 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.06 ticks)
+[2026-01-08 09:12:06] Probing fixed 0 vars, tightened 1 bounds.
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.05 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                         8705.0000     1175.0000            86.50%
+[2026-01-08 09:12:06]       0     0     8071.7782     6     8705.0000     8071.7782       14    7.27%
+[2026-01-08 09:12:06] *     0+    0                         8487.0000     8071.7782             4.89%
+[2026-01-08 09:12:06]       0     0     8255.4457     5     8487.0000      Cuts: 20       21    2.73%
+[2026-01-08 09:12:06]       0     0     8436.9245     4     8487.0000      Cuts: 22       28    0.59%
+[2026-01-08 09:12:06] *     0+    0                         8459.5000     8436.9245             0.27%
+[2026-01-08 09:12:06]       0     0     8442.8333     3     8459.5000      Cuts: 10       33    0.20%
+[2026-01-08 09:12:06]       0     0     8442.8333     3     8459.5000    MIRcuts: 3       34    0.20%
+[2026-01-08 09:12:06] *     0+    0                         8457.0000     8442.8333             0.17%
+[2026-01-08 09:12:06]       0     0        cutoff           8457.0000     8457.0000       34    0.00%
+[2026-01-08 09:12:06] Elapsed time = 0.03 sec. (1.83 ticks, tree = 0.01 MB, solutions = 4)
+
+[2026-01-08 09:12:06] Implied bound cuts applied:  1
+[2026-01-08 09:12:06] Flow cuts applied:  6
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  8
+[2026-01-08 09:12:06] Flow path cuts applied:  3
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  6
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.03 sec. (1.85 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.00 sec. (0.00 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.03 sec. (1.85 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=8457.00, 间隙=0.0000, 用时=0.05s
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={0,1}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               75
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 16762.500000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] MIP Presolve eliminated 204 rows and 156 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 48 coefficients.
+[2026-01-08 09:12:06] Reduced MIP has 108 rows, 168 columns, and 400 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.39 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.04 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] Reduced MIP has 108 rows, 168 columns, and 400 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.23 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.04 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.27 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                        16762.5000        0.0000           100.00%
+[2026-01-08 09:12:06]       0     0    13960.6001    18    16762.5000    13960.6001       77   16.72%
+[2026-01-08 09:12:06]       0     0    14904.1418    12    16762.5000      Cuts: 71      106   11.09%
+[2026-01-08 09:12:06]       0     0    15343.1248     4    16762.5000      Cuts: 76      131    8.47%
+[2026-01-08 09:12:06] *     0+    0                        15669.5000    15343.1248             2.08%
+[2026-01-08 09:12:06] *     0+    0                        15580.0000    15343.1248             1.52%
+[2026-01-08 09:12:06]       0     0    15358.3333     1    15580.0000      Cuts: 12      133    1.42%
+[2026-01-08 09:12:06] *     0+    0                        15372.5000    15358.3333             0.09%
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06]       0     2    15358.3333     1    15372.5000    15358.3333      133    0.09%
+[2026-01-08 09:12:06] Elapsed time = 0.05 sec. (7.80 ticks, tree = 0.02 MB, solutions = 4)
+
+[2026-01-08 09:12:06] Implied bound cuts applied:  4
+[2026-01-08 09:12:06] Flow cuts applied:  15
+[2026-01-08 09:12:06] Mixed integer rounding cuts applied:  47
+[2026-01-08 09:12:06] Flow path cuts applied:  7
+[2026-01-08 09:12:06] Lift and project cuts applied:  4
+[2026-01-08 09:12:06] Gomory fractional cuts applied:  13
+
+[2026-01-08 09:12:06] Root node processing (before b&c):
+[2026-01-08 09:12:06]   Real time             =    0.03 sec. (7.72 ticks)
+[2026-01-08 09:12:06] Parallel b&c, 20 threads:
+[2026-01-08 09:12:06]   Real time             =    0.03 sec. (1.30 ticks)
+[2026-01-08 09:12:06]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:06]                           ------------
+[2026-01-08 09:12:06] Total (root+branch&cut) =    0.06 sec. (9.02 ticks)
+[2026-01-08 09:12:06] [Planning] 求解完成: 目标=15372.50, 间隙=0.0001, 用时=0.07s
+[2026-01-08 09:12:06] [Planning] 求解联盟成本 S={0,1,2}
+[2026-01-08 09:12:06] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:06] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:06] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:06] CPXPARAM_TimeLimit                               75
+[2026-01-08 09:12:06] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:06] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:06] Found incumbent of value 24428.500000 after 0.00 sec. (0.03 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] MIP Presolve eliminated 144 rows and 0 columns.
+[2026-01-08 09:12:06] MIP Presolve modified 72 coefficients.
+[2026-01-08 09:12:06] Reduced MIP has 162 rows, 324 columns, and 744 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 36 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.54 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.06 ticks)
+[2026-01-08 09:12:06] Tried aggregator 1 time.
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06] Reduced MIP has 162 rows, 324 columns, and 744 nonzeros.
+[2026-01-08 09:12:06] Reduced MIP has 36 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:06] Presolve time = 0.00 sec. (0.40 ticks)
+[2026-01-08 09:12:06] Probing time = 0.00 sec. (0.06 ticks)
+[2026-01-08 09:12:06] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:06] MIP search method: dynamic search.
+[2026-01-08 09:12:06] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:06] Root relaxation solution time = 0.00 sec. (0.46 ticks)
+
+[2026-01-08 09:12:06]         Nodes                                         Cuts/
+[2026-01-08 09:12:06]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:06] *     0+    0                        24428.5000        0.0000           100.00%
+[2026-01-08 09:12:06]       0     0    19531.8501    24    24428.5000    19531.8501      120   20.04%
+[2026-01-08 09:12:06] *     0+    0                        23995.0000    19531.8501            18.60%
+[2026-01-08 09:12:06]       0     0    20802.8673    15    23995.0000      Cuts: 98      173   13.30%
+[2026-01-08 09:12:06] *     0+    0                        22819.0000    20802.8673             8.84%
+[2026-01-08 09:12:06]       0     0    21348.7046     7    22819.0000      Cuts: 95      212    6.44%
+[2026-01-08 09:12:06] *     0+    0                        22305.0577    21348.7046             4.29%
+[2026-01-08 09:12:06]       0     0    21373.8935     5    22305.0577      Cuts: 21      220    4.17%
+[2026-01-08 09:12:06] *     0+    0                        21896.5000    21373.8935             2.39%
+[2026-01-08 09:12:06]       0     0    21375.5072     5    21896.5000  Flowpaths: 2      223    2.38%
+[2026-01-08 09:12:06]       0     0    21378.1352     4    21896.5000       Cuts: 3      225    2.37%
+[2026-01-08 09:12:06] Detecting symmetries...
+[2026-01-08 09:12:06]       0     0    21378.2375     5    21896.5000       Cuts: 3      226    2.37%
+[2026-01-08 09:12:07] *     0+    0                        21732.8333    21378.2375             1.63%
+[2026-01-08 09:12:07] *     0+    0                        21566.8077    21378.2375             0.87%
+[2026-01-08 09:12:07] *     0+    0                        21527.2692    21378.5712             0.69%
+[2026-01-08 09:12:07] *     0+    0                        21488.5000    21378.5712             0.51%
+[2026-01-08 09:12:07]       0     0  -1.00000e+75     0    21488.5000    21378.5712      226    0.51%
+[2026-01-08 09:12:07] Detecting symmetries...
+[2026-01-08 09:12:07]       0     2    21378.2375     5    21488.5000    21378.5712      226    0.51%
+[2026-01-08 09:12:07] Elapsed time = 0.09 sec. (24.90 ticks, tree = 0.02 MB, solutions = 9)
+
+[2026-01-08 09:12:07] Flow cuts applied:  18
+[2026-01-08 09:12:07] Mixed integer rounding cuts applied:  65
+[2026-01-08 09:12:07] Flow path cuts applied:  12
+[2026-01-08 09:12:07] Lift and project cuts applied:  5
+[2026-01-08 09:12:07] Gomory fractional cuts applied:  17
+
+[2026-01-08 09:12:07] Root node processing (before b&c):
+[2026-01-08 09:12:07]   Real time             =    0.09 sec. (24.75 ticks)
+[2026-01-08 09:12:07] Parallel b&c, 20 threads:
+[2026-01-08 09:12:07]   Real time             =    0.03 sec. (3.77 ticks)
+[2026-01-08 09:12:07]   Sync time (average)   =    0.03 sec.
+[2026-01-08 09:12:07]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:07]                           ------------
+[2026-01-08 09:12:07] Total (root+branch&cut) =    0.13 sec. (28.52 ticks)
+[2026-01-08 09:12:07] [Planning] 求解完成: 目标=21488.50, 间隙=0.0000, 用时=0.15s
+[2026-01-08 09:12:07] [Planning] 求解联盟成本 S={1,2}
+[2026-01-08 09:12:07] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:07] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:07] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:07] CPXPARAM_TimeLimit                               75
+[2026-01-08 09:12:07] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:07] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:07] Tried aggregator 1 time.
+[2026-01-08 09:12:07] MIP Presolve eliminated 204 rows and 156 columns.
+[2026-01-08 09:12:07] MIP Presolve modified 48 coefficients.
+[2026-01-08 09:12:07] Reduced MIP has 108 rows, 168 columns, and 400 nonzeros.
+[2026-01-08 09:12:07] Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:07] Presolve time = 0.00 sec. (0.39 ticks)
+[2026-01-08 09:12:07] Found incumbent of value 85078.269231 after 0.00 sec. (0.83 ticks)
+[2026-01-08 09:12:07] Probing time = 0.00 sec. (0.04 ticks)
+[2026-01-08 09:12:07] Tried aggregator 1 time.
+[2026-01-08 09:12:07] Detecting symmetries...
+[2026-01-08 09:12:07] Reduced MIP has 108 rows, 168 columns, and 400 nonzeros.
+[2026-01-08 09:12:07] Reduced MIP has 24 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:07] Presolve time = 0.00 sec. (0.23 ticks)
+[2026-01-08 09:12:07] Probing time = 0.00 sec. (0.04 ticks)
+[2026-01-08 09:12:07] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:07] MIP search method: dynamic search.
+[2026-01-08 09:12:07] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:07] Root relaxation solution time = 0.00 sec. (0.27 ticks)
+
+[2026-01-08 09:12:07]         Nodes                                         Cuts/
+[2026-01-08 09:12:07]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:07] *     0+    0                        85078.2692        0.0000           100.00%
+[2026-01-08 09:12:07] *     0+    0                        16615.0000        0.0000           100.00%
+[2026-01-08 09:12:07]       0     0    13211.4245    18    16615.0000    13211.4245       78   20.48%
+[2026-01-08 09:12:07]       0     0    14103.4889     9    16615.0000      Cuts: 67      114   15.12%
+[2026-01-08 09:12:07] *     0+    0                        15410.5000    14103.4889             8.48%
+[2026-01-08 09:12:07]       0     0    14429.3112     8    15410.5000      Cuts: 52      145    6.37%
+[2026-01-08 09:12:07]       0     0    14444.3935     7    15410.5000      Cuts: 19      150    6.27%
+[2026-01-08 09:12:07]       0     0    14453.9531     8    15410.5000       Cuts: 5      155    6.21%
+[2026-01-08 09:12:07]       0     0    14460.0203     8    15410.5000       Cuts: 7      158    6.17%
+[2026-01-08 09:12:07] Detecting symmetries...
+[2026-01-08 09:12:07]       0     0    14462.7375     6    15410.5000       Cuts: 6      161    6.15%
+[2026-01-08 09:12:07]       0     0    14463.0712     7    15410.5000       Cuts: 3      163    6.15%
+[2026-01-08 09:12:07] *     0+    0                        14860.3077    14463.0712             2.67%
+[2026-01-08 09:12:07] *     0+    0                        14611.7692    14463.0712             1.02%
+[2026-01-08 09:12:07] *     0+    0                        14573.0000    14463.0712             0.75%
+[2026-01-08 09:12:07]       0     0        cutoff          14573.0000    14573.0000      163    0.00%
+[2026-01-08 09:12:07] Elapsed time = 0.05 sec. (12.92 ticks, tree = 0.01 MB, solutions = 6)
+
+[2026-01-08 09:12:07] Implied bound cuts applied:  4
+[2026-01-08 09:12:07] Flow cuts applied:  10
+[2026-01-08 09:12:07] Mixed integer rounding cuts applied:  33
+[2026-01-08 09:12:07] Flow path cuts applied:  6
+[2026-01-08 09:12:07] Lift and project cuts applied:  2
+[2026-01-08 09:12:07] Gomory fractional cuts applied:  10
+
+[2026-01-08 09:12:07] Root node processing (before b&c):
+[2026-01-08 09:12:07]   Real time             =    0.05 sec. (12.94 ticks)
+[2026-01-08 09:12:07] Parallel b&c, 20 threads:
+[2026-01-08 09:12:07]   Real time             =    0.00 sec. (0.00 ticks)
+[2026-01-08 09:12:07]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:07]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:07]                           ------------
+[2026-01-08 09:12:07] Total (root+branch&cut) =    0.05 sec. (12.94 ticks)
+[2026-01-08 09:12:07] [Planning] 求解完成: 目标=14573.00, 间隙=0.0000, 用时=0.10s
+[2026-01-08 09:12:07] [Planning] 求解联盟成本 S={2}
+[2026-01-08 09:12:07] [Planning] CPLEX 求解中...
+[2026-01-08 09:12:07] Version identifier: 22.1.0.0 | 2022-03-09 | 1a383f8ce
+[2026-01-08 09:12:07] CPXPARAM_MIP_Strategy_File                       3
+[2026-01-08 09:12:07] CPXPARAM_TimeLimit                               75
+[2026-01-08 09:12:07] CPXPARAM_WorkMem                                 4096
+[2026-01-08 09:12:07] CPXPARAM_WorkDir                                 "logs"
+[2026-01-08 09:12:07] Found incumbent of value 6116.000000 after 0.00 sec. (0.02 ticks)
+[2026-01-08 09:12:07] Tried aggregator 2 times.
+[2026-01-08 09:12:07] MIP Presolve eliminated 300 rows and 295 columns.
+[2026-01-08 09:12:07] MIP Presolve modified 17 coefficients.
+[2026-01-08 09:12:07] Aggregator did 2 substitutions.
+[2026-01-08 09:12:07] Reduced MIP has 16 rows, 27 columns, and 47 nonzeros.
+[2026-01-08 09:12:07] Reduced MIP has 5 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:07] Presolve time = 0.00 sec. (0.28 ticks)
+[2026-01-08 09:12:07] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:07] Tried aggregator 1 time.
+[2026-01-08 09:12:07] Detecting symmetries...
+[2026-01-08 09:12:07] Reduced MIP has 16 rows, 27 columns, and 47 nonzeros.
+[2026-01-08 09:12:07] Reduced MIP has 5 binaries, 0 generals, 0 SOSs, and 0 indicators.
+[2026-01-08 09:12:07] Presolve time = 0.00 sec. (0.03 ticks)
+[2026-01-08 09:12:07] Probing time = 0.00 sec. (0.01 ticks)
+[2026-01-08 09:12:07] MIP emphasis: balance optimality and feasibility.
+[2026-01-08 09:12:07] MIP search method: dynamic search.
+[2026-01-08 09:12:07] Parallel mode: deterministic, using up to 20 threads.
+[2026-01-08 09:12:07] Root relaxation solution time = 0.00 sec. (0.03 ticks)
+
+[2026-01-08 09:12:07]         Nodes                                         Cuts/
+[2026-01-08 09:12:07]    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+[2026-01-08 09:12:07] *     0+    0                         6116.0000      750.0000            87.74%
+[2026-01-08 09:12:07]       0     0     5917.7410     4     6116.0000     5917.7410       20    3.24%
+[2026-01-08 09:12:07]       0     0     6041.8872     2     6116.0000      Cuts: 23       30    1.21%
+[2026-01-08 09:12:07]       0     0     6097.7082     2     6116.0000      Cuts: 16       37    0.30%
+[2026-01-08 09:12:07]       0     0     6097.8571     2     6116.0000       Cuts: 3       38    0.30%
+[2026-01-08 09:12:07]       0     0        cutoff           6116.0000     6116.0000       38    0.00%
+[2026-01-08 09:12:07] Elapsed time = 0.02 sec. (1.31 ticks, tree = 0.01 MB, solutions = 1)
+
+[2026-01-08 09:12:07] Implied bound cuts applied:  3
+[2026-01-08 09:12:07] Flow cuts applied:  1
+[2026-01-08 09:12:07] Mixed integer rounding cuts applied:  8
+[2026-01-08 09:12:07] Flow path cuts applied:  3
+[2026-01-08 09:12:07] Gomory fractional cuts applied:  4
+
+[2026-01-08 09:12:07] Root node processing (before b&c):
+[2026-01-08 09:12:07]   Real time             =    0.02 sec. (1.32 ticks)
+[2026-01-08 09:12:07] Parallel b&c, 20 threads:
+[2026-01-08 09:12:07]   Real time             =    0.00 sec. (0.00 ticks)
+[2026-01-08 09:12:07]   Sync time (average)   =    0.00 sec.
+[2026-01-08 09:12:07]   Wait time (average)   =    0.00 sec.
+[2026-01-08 09:12:07]                           ------------
+[2026-01-08 09:12:07] Total (root+branch&cut) =    0.02 sec. (1.32 ticks)
+[2026-01-08 09:12:07] [Planning] 求解完成: 目标=6116.00, 间隙=0.0000, 用时=0.04s
+[2026-01-08 09:12:07] [SP:{2}:6116.00:0.0000]
+[2026-01-08 09:12:07] [SP] 未发现显著违反
+[2026-01-08 09:12:07] [CONVERGE:0.000100]
+[2026-01-08 09:12:07] [Algorithm] 收敛! 未找到更多违反的联盟。
+[2026-01-08 09:12:07] [DONE:SUCCESS:0.0000:1:1.33]
+[2026-01-08 09:12:07] 
+=== 最终分配结果 ===
+[2026-01-08 09:12:07] 大联盟成本 c(P) = 21488.50
+[2026-01-08 09:12:07] 最小核松弛量 v* = 0.0000
+[2026-01-08 09:12:07] 分配方案 pi:
+[2026-01-08 09:12:07]   工厂 0: 6915.50
+[2026-01-08 09:12:07]   工厂 1: 8457.00
+[2026-01-08 09:12:07]   工厂 2: 6116.00
+[2026-01-08 09:12:07] 分配总和: 21488.50 (应等于 c(P)=21488.50)
+[2026-01-08 09:12:07] 总迭代次数: 1
+[2026-01-08 09:12:07] 总运行时间: 1.33 秒
+[2026-01-08 09:12:07] 
+解释: v*=0 表示核心非空。
+[2026-01-08 09:12:07] 该分配是稳定的 - 没有联盟有动机偏离。
+[2026-01-08 09:12:07] [Output] 结果已写入: results/result_20260108_091205.json
+[2026-01-08 09:12:07] 
+结果已保存至: results/result_20260108_091205.json

@@ -1,0 +1,13 @@
+D:\YM-Code\GM-NTG-GUI\src\main.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\main.obj
+D:\YM-Code\GM-NTG-GUI\src\main_window.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\main_window.obj
+D:\YM-Code\GM-NTG-GUI\src\parameter_widget.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\parameter_widget.obj
+D:\YM-Code\GM-NTG-GUI\src\log_widget.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\log_widget.obj
+D:\YM-Code\GM-NTG-GUI\src\results_widget.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\results_widget.obj
+D:\YM-Code\GM-NTG-GUI\src\solver_worker.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\solver_worker.obj
+D:\YM-Code\GM-NTG-GUI\src\analysis_widget.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\analysis_widget.obj
+D:\YM-Code\GM-NTG-GUI\src\generator_widget.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\generator_widget.obj
+D:\YM-Code\GM-NTG-GUI\src\panels\overview_panel.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\overview_panel.obj
+D:\YM-Code\GM-NTG-GUI\src\panels\plant_panel.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\plant_panel.obj
+D:\YM-Code\GM-NTG-GUI\src\panels\coalition_panel.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\coalition_panel.obj
+D:\YM-Code\GM-NTG-GUI\src\panels\iteration_panel.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\iteration_panel.obj
+D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI_autogen\mocs_compilation_Release.cpp;D:\YM-Code\GM-NTG-GUI\build\GM-NTG-GUI.dir\Release\mocs_compilation_Release.obj
