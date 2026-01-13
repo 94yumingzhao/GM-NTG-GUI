@@ -130,6 +130,30 @@ void ParameterWidget::SetupUI() {
     sp_time_spin_->setSingleStep(30);
     form->addRow("子问题时限", sp_time_spin_);
 
+    // 规划子问题时限
+    planning_time_spin_ = new QDoubleSpinBox(this);
+    planning_time_spin_->setRange(1, 3600);
+    planning_time_spin_->setSuffix(" s");
+    planning_time_spin_->setDecimals(0);
+    planning_time_spin_->setSingleStep(30);
+    form->addRow("规划时限", planning_time_spin_);
+
+    // RF 参数 (启发式模式下使用)
+    rf_window_spin_ = new QSpinBox(this);
+    rf_window_spin_->setRange(1, 20);
+    form->addRow("RF窗口大小", rf_window_spin_);
+
+    rf_retries_spin_ = new QSpinBox(this);
+    rf_retries_spin_->setRange(1, 10);
+    form->addRow("RF重试次数", rf_retries_spin_);
+
+    rf_sub_time_spin_ = new QDoubleSpinBox(this);
+    rf_sub_time_spin_->setRange(1, 600);
+    rf_sub_time_spin_->setSuffix(" s");
+    rf_sub_time_spin_->setDecimals(0);
+    rf_sub_time_spin_->setSingleStep(10);
+    form->addRow("RF子问题时限", rf_sub_time_spin_);
+
     layout->addLayout(form);
 
     // 重置按钮
@@ -147,6 +171,10 @@ void ParameterWidget::ResetDefaults() {
     time_limit_spin_->setValue(3600);
     mp_time_spin_->setValue(300);
     sp_time_spin_->setValue(600);
+    planning_time_spin_->setValue(300);
+    rf_window_spin_->setValue(6);
+    rf_retries_spin_->setValue(3);
+    rf_sub_time_spin_->setValue(60);
 }
 
 QVariantMap ParameterWidget::GetParameters() const {
@@ -161,6 +189,12 @@ QVariantMap ParameterWidget::GetParameters() const {
     params["time_limit"] = time_limit_spin_->value();
     params["mp_time_limit"] = mp_time_spin_->value();
     params["sp_time_limit"] = sp_time_spin_->value();
+    params["planning_time_limit"] = planning_time_spin_->value();
+
+    // RF 启发式参数
+    params["rf_window"] = rf_window_spin_->value();
+    params["rf_retries"] = rf_retries_spin_->value();
+    params["rf_sub_time"] = rf_sub_time_spin_->value();
 
     return params;
 }
