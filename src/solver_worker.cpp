@@ -46,8 +46,65 @@ void SolverWorker::Run(const QString& solver_path, const QString& data_file,
     // 添加详细输出标志
     args << "-v";
 
-    // 时限参数 (如果求解器支持)
-    // args << "-t" << QString::number(params["time_limit"].toDouble());
+    // 全局时限
+    if (params.contains("time_limit")) {
+        args << "-t" << QString::number(params["time_limit"].toDouble());
+    }
+
+    // 收敛容差
+    if (params.contains("epsilon")) {
+        args << "-e" << QString::number(params["epsilon"].toDouble(), 'e', 4);
+    }
+
+    // 最大迭代次数
+    if (params.contains("max_iterations")) {
+        args << "-m" << QString::number(params["max_iterations"].toInt());
+    }
+
+    // MP 时限
+    if (params.contains("mp_time_limit")) {
+        args << "--mp-time" << QString::number(params["mp_time_limit"].toDouble());
+    }
+
+    // SP 时限
+    if (params.contains("sp_time_limit")) {
+        args << "--sp-time" << QString::number(params["sp_time_limit"].toDouble());
+    }
+
+    // 规划子问题时限
+    if (params.contains("planning_time_limit")) {
+        args << "--planning-time" << QString::number(params["planning_time_limit"].toDouble());
+    }
+
+    // CPLEX 线程数
+    if (params.contains("cplex_threads")) {
+        args << "--threads" << QString::number(params["cplex_threads"].toInt());
+    }
+
+    // CPLEX 内存
+    if (params.contains("cplex_memory")) {
+        args << "--memory" << QString::number(params["cplex_memory"].toInt());
+    }
+
+    // RF 窗口大小
+    if (params.contains("rf_window")) {
+        args << "--rf-window" << QString::number(params["rf_window"].toInt());
+    }
+
+    // RF 重试次数
+    if (params.contains("rf_retries")) {
+        args << "--rf-retries" << QString::number(params["rf_retries"].toInt());
+    }
+
+    // RF 子问题时限
+    if (params.contains("rf_sub_time")) {
+        args << "--rf-sub-time" << QString::number(params["rf_sub_time"].toDouble());
+    }
+
+    // SP 模式
+    if (params.contains("sp_strategy")) {
+        args << "--sp-mode" << params["sp_strategy"].toString();
+    }
 
     // 创建进程
     process_ = new QProcess(this);
@@ -61,6 +118,7 @@ void SolverWorker::Run(const QString& solver_path, const QString& data_file,
 
     emit LogMessage(QString("[GUI] 启动求解器: %1").arg(solver_path));
     emit LogMessage(QString("[GUI] 数据文件: %1").arg(data_file));
+    emit LogMessage(QString("[GUI] 命令行参数: %1").arg(args.join(" ")));
 
     // 启动进程
     process_->start(solver_path, args);
